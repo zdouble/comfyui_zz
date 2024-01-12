@@ -54,7 +54,7 @@ class Download:
                     "STRING",
                     {
                         "multiline": False,  # True if you want the field to look like the one on the ClipTextEncode node
-                        "default": "",
+                        "default": "1111",
                     },
                 ),
             },
@@ -62,7 +62,7 @@ class Download:
 
     FUNCTION = "test"
 
-    # OUTPUT_NODE = False
+    OUTPUT_NODE = False
 
     CATEGORY = "_for_testing"
 
