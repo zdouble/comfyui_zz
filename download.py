@@ -61,8 +61,10 @@ class Download:
         }
 
     FUNCTION = "test"
-
-    OUTPUT_NODE = False
+    
+    RETURN_TYPES = ()
+    
+    OUTPUT_NODE = True
 
     CATEGORY = "_for_testing"
 
