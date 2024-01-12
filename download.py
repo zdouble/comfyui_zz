@@ -64,7 +64,7 @@ class Example:
 
     # OUTPUT_NODE = False
 
-    CATEGORY = "download"
+    CATEGORY = "_for_testing"
 
     def test(self, string):
         if string:
