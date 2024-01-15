@@ -71,6 +71,7 @@ class Download:
     def test(self, string):
         if string:
             subprocess.call(string, shell=True, stdout=None, stderr=None)
+        return {}
 
 
 # A dictionary that contains all nodes you want to export with their names
