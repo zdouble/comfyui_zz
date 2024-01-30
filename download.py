@@ -1,6 +1,54 @@
 import subprocess
 
 
+subprocess.call("apt update -qq", shell=True, stdout=None, stderr=None)
+subprocess.call("apt -y install -qq aria2", shell=True, stdout=None, stderr=None)
+subprocess.call(
+    "aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/119057 -d /comfyui/models/checkpoints",
+    shell=True,
+    stdout=None,
+    stderr=None,
+)
+subprocess.call(
+    "aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/119057 -d /comfyui/models/checkpoints",
+    shell=True,
+    stdout=None,
+    stderr=None,
+)
+subprocess.call(
+    "aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/pytorch_model.bin -d /comfyui/models/clip_vision/SD1.5 -o pytorch_model.bin",
+    shell=True,
+    stdout=None,
+    stderr=None,
+)
+subprocess.call(
+    "aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/gemasai/4x_NMKD-Superscale-SP_178000_G/resolve/main/4x_NMKD-Superscale-SP_178000_G.pth -d /comfyui/models/upscale_models -o 4x_NMKD-Superscale-SP_178000_G.pth",
+    shell=True,
+    stdout=None,
+    stderr=None,
+)
+subprocess.call(
+    "aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Acly/Omni-SR/resolve/main/OmniSR_X2_DIV2K.safetensors -d /comfyui/models/upscale_models -o OmniSR_X2_DIV2K.safetensors",
+    shell=True,
+    stdout=None,
+    stderr=None,
+)
+subprocess.call(
+    "aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Acly/Omni-SR/resolve/main/OmniSR_X3_DIV2K.safetensors -d /comfyui/models/upscale_models -o OmniSR_X3_DIV2K.safetensors",
+    shell=True,
+    stdout=None,
+    stderr=None,
+)
+subprocess.call(
+    "aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/Acly/Omni-SR/resolve/main/OmniSR_X4_DIV2K.safetensors -d /comfyui/models/upscale_models -o OmniSR_X4_DIV2K.safetensors",
+    shell=True,
+    stdout=None,
+    stderr=None,
+)
+
+print('download end')
+
+
 class Download:
     """
     A example node
@@ -61,9 +109,9 @@ class Download:
         }
 
     FUNCTION = "test"
-    
+
     RETURN_TYPES = ()
-    
+
     OUTPUT_NODE = True
 
     CATEGORY = "_for_testing"
